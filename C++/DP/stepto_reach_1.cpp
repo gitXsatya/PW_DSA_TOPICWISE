@@ -27,12 +27,12 @@ int main(){
     int n;
     cin>>n;
     vector <int> dp(n+1,-1);
-    cout<<f(n)<<endl;
+    cout<<f(n)<<endl; // extremely slow O(2^n)
     dp.clear();
     dp.resize(n+1,-1);
-    cout<<fud(n,dp)<<endl;
+    cout<<fud(n,dp)<<endl; //O(n) fast top down
     dp.clear();
-    dp.resize(n+1,-1);
+    dp.resize(n+1,-1);//O(n) fast bottom up
     cout<<tdu(n,dp)<<endl;
 
 }
